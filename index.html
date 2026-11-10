@@ -12,6 +12,42 @@
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="style.css">
+
+  <!-- Gaya tambahan: foto mitra dapat diklik -->
+  <style>
+    .partner-link {
+      display: block;
+      cursor: pointer;
+      text-decoration: none;
+      border-radius: 16px;
+      overflow: hidden;
+      transition: transform 0.25s ease, filter 0.25s ease, box-shadow 0.25s ease;
+    }
+    .partner-link:hover {
+      transform: translateY(-4px);
+      filter: brightness(1.05);
+      box-shadow: 0 10px 24px rgba(21, 148, 71, 0.18);
+    }
+    .partner-link:active {
+      transform: translateY(-1px) scale(0.99);
+    }
+    .partner-link img.partner-photo {
+      transition: transform 0.3s ease;
+    }
+    .partner-link:hover img.partner-photo {
+      transform: scale(1.04);
+    }
+    .partner-hint {
+      text-align: center;
+      font-size: 0.9rem;
+      color: #5a7a5a;
+      margin: -0.5rem 0 2rem;
+      font-weight: 600;
+    }
+    .partner-hint span {
+      margin-right: 0.35rem;
+    }
+  </style>
 </head>
 
 <body>
@@ -725,14 +761,25 @@
         </div>
 
         <h3 class="kolaborasi-title reveal">Upaya Kolaboratif dengan Berbagai Pihak</h3>
+        <p class="partner-hint reveal"><span>📸</span> Klik foto mitra untuk informasi lebih lengkap</p>
         <div class="partner-grid">
           <article class="partner-card reveal">
-            <img src="assets/pemerintah-desa.png" alt="Pemerintah Desa Sambirejo" class="partner-photo" loading="lazy">
+            <a href="https://drive.google.com/file/d/1j_I61U2wu0omaaqc6GZngb5y-4lPNQjm/view?usp=drive_link"
+               target="_blank" rel="noopener noreferrer"
+               class="partner-link"
+               aria-label="Buka dokumentasi Pemerintah Desa Sambirejo">
+              <img src="assets/pemerintah-desa.png" alt="Pemerintah Desa Sambirejo" class="partner-photo" loading="lazy">
+            </a>
             <h4>Pemerintah Desa Sambirejo</h4>
             <p>Peminjaman lahan kosong untuk laboratorium AGRO SAKA.</p>
           </article>
           <article class="partner-card reveal">
-            <img src="assets/dinas-pertanian.png" alt="Dinas Pertanian" class="partner-photo" loading="lazy">
+            <a href="https://drive.google.com/file/d/1MTw5qkn66nO1KRpvNqf9F1Piujd0s_ag/view?usp=drive_link"
+               target="_blank" rel="noopener noreferrer"
+               class="partner-link"
+               aria-label="Buka dokumentasi Dinas Pertanian">
+              <img src="assets/dinas-pertanian.png" alt="Dinas Pertanian" class="partner-photo" loading="lazy">
+            </a>
             <h4>Dinas Pertanian</h4>
             <p>Dukungan teknis pertanian dan peternakan.</p>
           </article>
