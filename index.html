@@ -13,40 +13,28 @@
 
   <link rel="stylesheet" href="style.css">
 
-  <!-- Gaya tambahan: foto mitra dapat diklik -->
+  <!-- Gaya tambahan untuk teks informasi lebih lanjut pada kartu mitra -->
   <style>
-    .partner-link {
-      display: block;
-      cursor: pointer;
-      text-decoration: none;
-      border-radius: 16px;
-      overflow: hidden;
-      transition: transform 0.25s ease, filter 0.25s ease, box-shadow 0.25s ease;
-    }
-    .partner-link:hover {
-      transform: translateY(-4px);
-      filter: brightness(1.05);
-      box-shadow: 0 10px 24px rgba(21, 148, 71, 0.18);
-    }
-    .partner-link:active {
-      transform: translateY(-1px) scale(0.99);
-    }
-    .partner-link img.partner-photo {
-      transition: transform 0.3s ease;
-    }
-    .partner-link:hover img.partner-photo {
-      transform: scale(1.04);
-    }
     .partner-hint {
       text-align: center;
+      margin: 0.5rem auto 2rem;
       font-size: 0.9rem;
-      color: #5a7a5a;
-      margin: -0.5rem 0 2rem;
-      font-weight: 600;
+      color: #5a7a65;
+      font-style: italic;
     }
-    .partner-hint span {
-      margin-right: 0.35rem;
+    .partner-more {
+      display: inline-block;
+      margin-top: 0.85rem;
+      padding-top: 0.65rem;
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: #159447;
+      text-decoration: none;
+      border-top: 1px solid rgba(21, 148, 71, 0.18);
+      letter-spacing: 0.3px;
+      transition: color 0.2s ease;
     }
+    .partner-more:hover { color: #0f6e35; }
   </style>
 </head>
 
@@ -761,30 +749,40 @@
         </div>
 
         <h3 class="kolaborasi-title reveal">Upaya Kolaboratif dengan Berbagai Pihak</h3>
-        <p class="partner-hint reveal"><span>📸</span> Klik foto mitra untuk informasi lebih lengkap</p>
+        <p class="partner-hint reveal">
+          <span>🔗</span> Klik gambar atau tautan pada setiap kartu untuk informasi lebih lanjut.
+        </p>
         <div class="partner-grid">
           <article class="partner-card reveal">
             <a href="https://drive.google.com/file/d/1j_I61U2wu0omaaqc6GZngb5y-4lPNQjm/view?usp=drive_link"
-               target="_blank" rel="noopener noreferrer"
-               class="partner-link"
-               aria-label="Buka dokumentasi Pemerintah Desa Sambirejo">
+               target="_blank" rel="noopener noreferrer" class="partner-link">
               <img src="assets/pemerintah-desa.png" alt="Pemerintah Desa Sambirejo" class="partner-photo" loading="lazy">
             </a>
             <h4>Pemerintah Desa Sambirejo</h4>
             <p>Peminjaman lahan kosong untuk laboratorium AGRO SAKA.</p>
+            <a href="https://drive.google.com/file/d/1j_I61U2wu0omaaqc6GZngb5y-4lPNQjm/view?usp=drive_link"
+               target="_blank" rel="noopener noreferrer" class="partner-more">
+              Informasi lebih lanjut ↗
+            </a>
           </article>
           <article class="partner-card reveal">
             <a href="https://drive.google.com/file/d/1MTw5qkn66nO1KRpvNqf9F1Piujd0s_ag/view?usp=drive_link"
-               target="_blank" rel="noopener noreferrer"
-               class="partner-link"
-               aria-label="Buka dokumentasi Dinas Pertanian">
+               target="_blank" rel="noopener noreferrer" class="partner-link">
               <img src="assets/dinas-pertanian.png" alt="Dinas Pertanian" class="partner-photo" loading="lazy">
             </a>
             <h4>Dinas Pertanian</h4>
             <p>Dukungan teknis pertanian dan peternakan.</p>
+            <a href="https://drive.google.com/file/d/1MTw5qkn66nO1KRpvNqf9F1Piujd0s_ag/view?usp=drive_link"
+               target="_blank" rel="noopener noreferrer" class="partner-more">
+              Informasi lebih lanjut ↗
+            </a>
           </article>
           <article class="partner-card reveal">
-            <img src="assets/sdn-sambirejo.png" alt="SDN 2 Sambirejo" class="partner-photo" loading="lazy">
+            <!-- Ganti href di bawah dengan link dokumentasi SDN 2 Sambirejo -->
+            <a href="#"
+               target="_blank" rel="noopener noreferrer" class="partner-link">
+              <img src="assets/sdn-sambirejo.png" alt="SDN 2 Sambirejo" class="partner-photo" loading="lazy">
+            </a>
             <h4>SDN 2 Sambirejo</h4>
             <p>Kerja sama pemanfaatan lahan untuk kegiatan murid.</p>
           </article>
